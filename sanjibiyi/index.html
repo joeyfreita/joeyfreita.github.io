@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三级笔译 - 全国翻译专业资格考试(CATTI)备考指南与资料库</title>
+    <meta name="description" content="本站提供CATTI三级笔译考试官方大纲解读、历年真题解析、备考策略及实务练习素材，助力考生系统掌握翻译技巧，顺利通过三级笔译认证。">
+    <meta name="keywords" content="三级笔译, CATTI三级笔译, 全国翻译专业资格考试, 翻译备考, 笔译实务, 笔译综合能力">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --accent-hover: #2980b9;
+            --bg-light: #f8f9fa;
+            --text-main: #333;
+            --text-secondary: #666;
+            --border-color: #e1e4e8;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Exam Structure */
+        .exam-structure {
+            background-color: var(--bg-light);
+            padding: 60px 0;
+        }
+
+        .structure-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .structure-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .structure-content p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .structure-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .structure-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .structure-image {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .structure-image img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tip-card {
+            border-left: 4px solid var(--accent-color);
+            background: #fff;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .tip-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tip-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .structure-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>⚡</span> CATTI备考助手
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#exam-info">考试大纲</a></li>
+                    <li><a href="#tips">备考策略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">获取真题集</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>三级笔译考试</h1>
+                <p>全国翻译专业资格考试（CATTI）三级笔译是翻译行业的基础门槛认证。本站为您提供权威的考试解析、实务技巧及备考资源，帮助您夯实翻译基础，迈向专业翻译之路。</p>
+                <div style="margin-bottom: 30px;">
+                    <a href="#exam-info" class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">了解考试详情</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>3门</h3>
+                        <p>考试科目</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2小时</h3>
+                        <p>综合能力考试</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>180分钟</h3>
+                        <p>笔译实务考试</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Information Grid -->
+        <section class="container" id="exam-info">
+            <div class="section-title">
+                <h2>考试核心信息</h2>
+                <p>全面了解三级笔译的考核标准与内容架构</p>
+            </div>
+            <div class="info-grid">
+                <article class="info-card">
+                    <div class="icon-box">📝</div>
+                    <h3>考试性质</h3>
+                    <p>三级笔译是针对具备一定外语基础，能够从事一般性翻译工作的专业技术人员设立的资格认证。侧重考察译员的基础双语转换能力和对常用话题的理解。</p>
+                </article>
+                <article class="info-card">
+                    <div class="icon-box">🎯</div>
+                    <h3>适用人群</h3>
+                    <p>适合英语专业本科高年级学生、具有2年以上相关工作经验的翻译爱好者、以及计划进入翻译行业或从事涉外文职工作的职场人士。</p>
+                </article>
+                <article class="info-card">
+                    <div class="icon-box">📚</div>
+                    <h3>证书效力</h3>
+                    <p>三级笔译证书是翻译专业人才市场化的基础凭证，部分企事业单位将其作为招聘、定岗、晋升翻译岗位的参考依据之一。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Structure Breakdown -->
+        <section class="exam-structure">
+            <div class="container">
+                <div class="section-title">
+                    <h2>科目设置与分值</h2>
+                    <p>掌握考试结构，才能制定科学的复习计划</p>
+                </div>
+                <div class="structure-container">
+                    <div class="structure-content">
+                        <h3>两门科目，全面考核</h3>
+                        <p>三级笔译考试分为《笔译综合能力》和《笔译实务》两门科目，均为非外语类专业的笔译专业资格（水平）考试。</p>
+                        <ul class="structure-list">
+                            <li><strong>笔译综合能力：</strong> 试卷满分为100分，考试时间120分钟。题型包括词汇、语法、阅读理解等，主要考察译员的语言基础功底。</li>
+                            <li><strong>笔译实务：</strong> 试卷满分为100分，考试时间180分钟。包含英译汉和汉译英两部分，要求考生在规定时间内完成一定字数的翻译。</li>
+                            <li><strong>合格标准：</strong> 两门科目均达到60分即为合格，获得三级笔译资格证书。</li>
+                        </ul>
+                    </div>
+                    <div class="structure-image">
+                        <!-- Placeholder for exam structure visual -->
+                        <img src="https://picsum.photos/seed/catti3/600/400.jpg" alt="三级笔译考试科目结构示意图">
+                        <p class="image-caption">图示：三级笔译考试试卷结构与时间分配建议</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Tips -->
+        <section class="container" id="tips">
+            <div class="section-title">
+                <h2>备考策略与技巧</h2>
+                <p>从词汇积累到实战演练的进阶指南</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>1. 扩充词汇量</h4>
+                    <p>不仅要背单词拼写，更要掌握常用词的搭配和习语。建议使用双语对照的词汇书，结合例句记忆。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>2. 精读与泛读结合</h4>
+                    <p>精读《经济学人》、《中国日报》等双语外刊，分析长难句结构；泛读各类题材文章，保持语感。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>3. 模拟实战训练</h4>
+                    <p>严格按照考试时间进行真题演练，重点训练汉译英时的“信达雅”平衡，以及英译汉时的信息重组能力。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>4. 错题复盘</h4>
+                    <p>建立错题本，分析翻译失误的原因（是词汇不足、语法错误还是逻辑不通），针对性进行强化训练。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" id="faq">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>解答关于三级笔译考试的疑惑</p>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        三级笔译证书终身有效吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        CATTI证书是长期有效的，不设有效期限制。通过考试后获得的证书在职业生涯中具有长期参考价值。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        三级笔译难度如何？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        三级笔译属于入门级认证，难度适中。它主要考察基础翻译能力，要求考生能够准确、流畅地翻译一般性文章，而非文学性强的作品。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        报名条件有什么限制？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        CATTI考试原则上不设学历、资历、年龄限制。凡遵守中华人民共和国宪法和法律，恪守职业道德的人员，均可报名参加相应级别、语种的考试。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        汉译英和英译汉哪个难？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        难度因人而异。对于中文母语者，汉译英往往更难，因为需要将中文的意合结构转化为英文的形合结构，并避免中式英语。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>备考资源</h4>
+                    <ul>
+                        <li><a href="#">历年真题下载</a></li>
+                        <li><a href="#">核心词汇表</a></li>
+                        <li><a href="#">翻译技巧文章</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>考试动态</h4>
+                    <ul>
+                        <li><a href="#">2024年考试时间表</a></li>
+                        <li><a href="#">报名入口</a></li>
+                        <li><a href="#">成绩查询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 三级笔译备考资源网. All Rights Reserved. 本站内容仅供学习交流，不作为官方考试依据。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
