@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="凶相，指面相中显露出的凶险、严厉或威慑力的特征。本站提供凶相面相学深度解析、特征识别指南、面相与性格心理学分析，帮助您理解面相中的威严与气场。">
+    <meta name="keywords" content="凶相,面相学,面相特征,威严面相,性格分析,相术">
+    <title>凶相-面相特征解析与威严气场识别指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c2c2c;
+            --accent-color: #8a2be2;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4a4a4a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #7a1ec2;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Analysis Section */
+        .analysis-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .analysis-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .analysis-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .analysis-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .analysis-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .analysis-image {
+            width: 100%;
+            height: 350px;
+            background-color: #e0e0e0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .analysis-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .analysis-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            padding-left: 10px;
+            display: none;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .analysis-container {
+                grid-template-columns: 1fr;
+            }
+
+            .analysis-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>相</span>相解析
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">特征详解</a></li>
+                    <li><a href="#">性格分析</a></li>
+                    <li><a href="#">常见误区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>识别面相中的凶相</h1>
+            <p>深入探讨面相学中关于“凶相”的特征解析。了解哪些面部特征通常被视为威严、严厉或带有压迫感，以及它们在性格心理学上的表现。</p>
+            <a href="#features" class="cta-button">开始探索</a>
+        </div>
+    </section>
+
+    <main class="container" id="features">
+        <div class="section-title">
+            <h2>核心特征解析</h2>
+            <p>面相学中的“凶相”并非指邪恶，更多是指一种极具威慑力、严肃或生硬的面部特征。</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon">👁️</div>
+                <h3>眉骨突出</h3>
+                <p>眉骨高耸或突出往往被视为具有攻击性或领导力的象征。这类人通常性格刚毅，做事果断，但也容易给人留下难以接近的印象。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">👄</div>
+                <h3>嘴型紧抿</h3>
+                <p>嘴唇紧闭、嘴角向下或呈直线型，通常暗示着此人性格固执、内敛，甚至带有防御心理。在社交场合中，这种面相常被解读为严肃。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">👃</div>
+                <h3>鼻梁高耸</h3>
+                <p>高挺的鼻梁在面相中通常代表自尊心强、有主见。当鼻梁与眉骨搭配较高时，会形成一种压迫感，使人感到气场强大。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>额头宽大</h3>
+                <p>宽阔的额头往往意味着思维缜密、理性。这种面相特征常出现在那些思考问题非常深入、不苟言笑的人脸上。</p>
+            </article>
+        </div>
+
+        <div class="section-title">
+            <h2>深度分析</h2>
+        </div>
+
+        <div class="analysis-container">
+            <div class="analysis-content">
+                <h3>威严与严厉的区分</h3>
+                <p>在面相学中，区分“威严”与“凶相”的关键在于神态的柔和度。真正的威严源于内心的自信与修养，而单纯的凶相则往往伴随着眼神的锐利或面部肌肉的僵硬。</p>
+                <ul class="analysis-list">
+                    <li><strong>眼神：</strong> 凶相者眼神常呈直视状，缺乏闪躲，甚至带有寒光。</li>
+                    <li><strong>下颌：</strong> 下颌线条清晰、方正，给人一种不可动摇的坚定感。</li>
+                    <li><strong>颧骨：</strong> 颧骨高耸且饱满，常被视为权力欲较强的表现。</li>
+                </ul>
+            </div>
+            <div class="analysis-image">
+                <!-- 使用 Picsum 随机图，模拟面相分析图 -->
+                <img src="https://picsum.photos/seed/face1/600/400" alt="面相特征示意图">
+            </div>
+        </div>
+    </main>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">面相中的凶相一定代表坏人吗？</div>
+                    <div class="faq-answer">不一定。面相学中的“凶”更多是指一种严肃、严厉或带有压迫感的特征。这通常与个人的性格、职业（如警察、法官）或生活经历有关，并不直接等同于道德上的邪恶。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何改善看起来“凶”的面相？</div>
+                    <div class="faq-answer">面相学认为“相由心生”。通过调整心态、保持微笑、练习温和的沟通方式，可以逐渐改变面部肌肉的记忆，使面相看起来更加和善亲切。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">眉骨高和颧骨高哪种更凶？</div>
+                    <div class="faq-answer">这取决于整体的搭配。两者都是代表权力和意志的面部特征。如果两者同时高耸，通常给人极强的领导力和压迫感；如果只是眉骨高而颧骨低，则可能更多表现为一种攻击性或锐气。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>相相解析</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">致力于提供专业、客观的面相学知识普及，帮助读者通过面相了解性格与运势。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">面相基础</a></li>
+                        <li><a href="#">五官详解</a></li>
+                        <li><a href="#">手相分析</a></li>
+                        <li><a href="#">运势预测</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>免责声明</h4>
+                    <p style="font-size: 0.85rem;">本站内容仅供娱乐与参考，请理性看待面相学，切勿迷信。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 相相解析网. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
