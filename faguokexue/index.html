@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿尔贝-法国著名科学家传记与科学贡献指南</title>
+    <meta name="description" content="阿尔贝-法国著名科学家传记与科学贡献指南。详细介绍阿尔贝·雅卡尔及其发明创造、科学思想、主要著作及对现代科技的影响。">
+    <meta name="keywords" content="阿尔贝, 法国科学家, 雅卡尔, 珠子编织机, 纺织机, 历史发明, 科学传记">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a3c6e;
+            --secondary-color: #c9a227;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --light-text: #666666;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0f2440 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid #ddd;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .timeline-content h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* Cards Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            background-color: #e0e0e0;
+            height: 160px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 3rem;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            align-self: flex-start;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-box {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .sidebar-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .list-group {
+            list-style: none;
+        }
+
+        .list-group li {
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .list-group li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .list-group a {
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list-group span {
+            font-size: 0.8rem;
+            color: var(--light-text);
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            position: relative;
+        }
+
+        .quote-box p {
+            font-style: italic;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .quote-box cite {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: static;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">阿尔贝<span>·科学档案</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">人物简介</a></li>
+                    <li><a href="#inventions">主要发明</a></li>
+                    <li><a href="#legacy">科学遗产</a></li>
+                    <li><a href="#timeline">生平年表</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>阿尔贝·雅卡尔：从纺织机到现代编程的先驱</h1>
+                <p>探索这位法国科学家如何通过“穿孔卡片”技术，跨越两个世纪连接起织布机与计算机。</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>1801</h3>
+                        <p>发明自动化织布机</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1837</h3>
+                        <p>逝世于巴黎</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1936</h3>
+                        <p>图灵证实其思想影响</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content -->
+            <div class="content-area">
+                <section id="intro">
+                    <h2 class="section-title">人物简介</h2>
+                    <div class="intro-text">
+                        <p>阿尔贝·雅卡尔是19世纪法国著名的发明家，以其在纺织机械领域的卓越贡献而闻名于世。他最著名的成就是改进了提花织布机，这种机器能够根据穿孔卡片上的图案自动控制经纬线的编织，从而实现了纺织图案的自动化生产。</p>
+                        <p>这一发明在当时引发了工业革命的巨大反响，极大地提高了纺织生产的效率和精度。更重要的是，雅卡尔的穿孔卡片技术后来成为了现代计算机编程思想的雏形，为查尔斯·巴贝奇和后来的计算机先驱们提供了关键的灵感来源。</p>
+                    </div>
+                </section>
+
+                <section id="inventions">
+                    <h2 class="section-title">主要发明与技术</h2>
+                    <div class="grid-container">
+                        <article class="card">
+                            <div class="card-img-placeholder">🧵</div>
+                            <div class="card-content">
+                                <span class="card-tag">核心发明</span>
+                                <h3>提花织布机</h3>
+                                <p>雅卡尔在法国皇帝拿破仑的支持下，设计了一种能够自动操作提花的机器。通过在卡片上穿孔来记录图案信息，机器能够精准地控制每根经线的起落，从而织出复杂的几何图案。</p>
+                                <a href="#" class="card-link">了解工作原理 &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img-placeholder">🧩</div>
+                            <div class="card-content">
+                                <span class="card-tag">关键组件</span>
+                                <h3>穿孔卡片</h3>
+                                <p>这是雅卡尔发明的核心载体。卡片上的孔洞代表“开”或“关”，这种二元逻辑（0和1）的早期形式，成为了信息编码的基础。</p>
+                                <a href="#" class="card-link">探索数据存储历史 &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img-placeholder">⚙️</div>
+                            <div class="card-content">
+                                <span class="card-tag">机械结构</span>
+                                <h3>提花控制装置</h3>
+                                <p>雅卡尔设计了一种复杂的机械联动装置，能够将穿孔卡片上的数据转化为织布机的物理运动，实现了从数据到实体产品的自动化转换。</p>
+                                <a href="#" class="card-link">查看机械结构图解 &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="legacy">
+                    <h2 class="section-title">科学遗产与影响</h2>
+                    <div class="intro-text">
+                        <p>雅卡尔的影响远超出了纺织工业。他的工作展示了如何通过预先定义的规则（卡片上的孔）来控制复杂的机械系统。这种“存储程序”的概念直接启发了查尔斯·巴贝奇设计“分析机”，以及后来的赫尔曼·霍尔瑞斯利用类似穿孔卡片技术发明了制表机，最终奠定了现代计算机硬件的基础。</p>
+                    </div>
+                </section>
+
+                <section id="timeline">
+                    <h2 class="section-title">生平年表</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-date">1752年</span>
+                            <div class="timeline-content">
+                                <h4>出生</h4>
+                                <p>雅卡尔出生于法国里昂附近的里乌尔城，家庭经营着一家染织作坊。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">1801年</span>
+                            <div class="timeline-content">
+                                <h4>获得专利</h4>
+                                <p>雅卡尔发明的“机械化提花织机”获得了法国专利，并在巴黎博览会上展出，震惊了世界。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">1804年</span>
+                            <div class="timeline-content">
+                                <h4>工业化应用</h4>
+                                <p>第一台全自动提花织布机在里昂投入使用，彻底改变了纺织业的生产模式。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">1837年</span>
+                            <div class="timeline-content">
+                                <h4>逝世</h4>
+                                <p>雅卡尔在巴黎逝世，享年85岁。他的一生见证了工业革命的蓬勃发展。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-box quote-box">
+                    <p>“机器本身并不思考，但它遵循着编写好的规则行事。”</p>
+                    <cite>—— 阿尔贝·雅卡尔</cite>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>相关领域</h3>
+                    <ul class="list-group">
+                        <li><a href="#">纺织机械史</a> <span>工业革命</span></li>
+                        <li><a href="#">计算机发展史</a> <span>图灵机</span></li>
+                        <li><a href="#">信息编码</a> <span>二进制</span></li>
+                        <li><a href="#">巴贝奇</a> <span>分析机</span></li>
+                        <li><a href="#">霍尔瑞斯</a> <span>制表机</span></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>推荐阅读</h3>
+                    <ul class="list-group">
+                        <li><a href="#">《雅卡尔织机与早期计算机》</a></li>
+                        <li><a href="#">《工业革命中的法国工程师》</a></li>
+                        <li><a href="#">《从卡片到屏幕：数据存储演变》</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>阿尔贝·科学档案</h4>
+                <p>致力于普及科学历史知识，介绍改变世界的发明与人物。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#intro">人物简介</a></li>
+                    <li><a href="#inventions">主要发明</a></li>
+                    <li><a href="#timeline">生平年表</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关主题</h4>
+                <ul>
+                    <li><a href="#">工业革命</a></li>
+                    <li><a href="#">计算机科学史</a></li>
+                    <li><a href="#">机械工程</a></li>
+                    <li><a href="#">科学史</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 阿尔贝·科学档案. 保留所有权利. 本站为信息展示页面，非官方机构。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
