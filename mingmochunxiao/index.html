@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名模春晓-时尚写真与职业发展历程深度解析</title>
+    <meta name="description" content="名模春晓官方网站，收录名模春晓的时尚写真、职业生涯、模特作品及行业资讯。深入了解这位知名模特的成长故事、拍摄风格与时尚影响力。">
+    <meta name="keywords" content="名模春晓, 春晓, 模特写真, 时尚模特, 职业生涯, 时尚资讯">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c2c2c;
+            --accent-color: #c9a87c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-color: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #b08d65;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        /* Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 4px;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .profile-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .profile-info p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .tags {
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .gallery-card .caption {
+            padding: 15px;
+        }
+
+        .gallery-card .caption h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-card .caption p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Career Path */
+        .career-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .career-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .career-date {
+            font-weight: 700;
+            color: var(--accent-color);
+            min-width: 120px;
+        }
+
+        .career-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .profile-grid { grid-template-columns: 1fr; }
+            nav ul { display: none; } /* Simplified for mobile */
+            .header-inner { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">名模<span>春晓</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#profile">个人简介</a></li>
+                    <li><a href="#gallery">时尚写真</a></li>
+                    <li><a href="#career">职业历程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <img src="https://picsum.photos/seed/fashionhero/1920/1080" alt="名模春晓" class="hero-bg">
+            <div class="hero-content">
+                <h1>名模春晓</h1>
+                <p>探索光影与时尚的交汇点，记录职业模特的蜕变之路与独特魅力。</p>
+                <a href="#profile" class="btn">了解详情</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <div class="container">
+                <div class="section-title">
+                    <h2>关于名模春晓</h2>
+                    <p>从平面模特到国际秀场，她用镜头语言讲述故事</p>
+                </div>
+                <div class="profile-grid">
+                    <img src="https://picsum.photos/seed/modelportrait/400/500" alt="名模春晓肖像" class="profile-img">
+                    <div class="profile-info">
+                        <h3>职业档案</h3>
+                        <p>名模春晓（Chun Xiao）是一位活跃于国内时尚圈的专业模特，以其独特的气质和多变的风格著称。她不仅擅长硬照拍摄，在平面广告与影视宣传中也展现了极强的表现力。春晓在模特行业深耕多年，积累了丰富的拍摄经验，能够精准捕捉摄影师的意图，将服装与配饰的质感完美呈现。</p>
+                        <p>她的职业生涯涵盖了多个知名品牌的大片拍摄，包括高端时装、珠宝首饰以及生活方式类广告。春晓的镜头表现力自然流畅，善于通过眼神和肢体语言传达情感，是众多时尚杂志和品牌方青睐的模特人选。</p>
+                        <div class="tags">
+                            <span class="tag">高级定制</span>
+                            <span class="tag">时尚大片</span>
+                            <span class="tag">商业广告</span>
+                            <span class="tag">平面模特</span>
+                            <span class="tag">风格多变</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="container">
+                <div class="section-title">
+                    <h2>精选时尚写真</h2>
+                    <p>捕捉每一个瞬间的灵感，展现不同的时尚态度</p>
+                </div>
+                <div class="gallery-grid">
+                    <article class="gallery-card">
+                        <img src="https://picsum.photos/seed/fashion1/400/500" alt="时尚风格一">
+                        <div class="caption">
+                            <h4>都市冷艳风</h4>
+                            <p>在都市霓虹背景下，展现现代女性的独立与冷艳。</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://picsum.photos/seed/fashion2/400/500" alt="时尚风格二">
+                        <div class="caption">
+                            <h4>复古优雅风</h4>
+                            <p>通过复古妆容与服饰，重现经典年代的温婉气质。</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://picsum.photos/seed/fashion3/400/500" alt="时尚风格三">
+                        <div class="caption">
+                            <h4>前卫艺术风</h4>
+                            <p>打破常规，利用光影与剪裁表达前卫的艺术概念。</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://picsum.photos/seed/fashion4/400/500" alt="时尚风格四">
+                        <div class="caption">
+                            <h4>清新自然风</h4>
+                            <p>回归自然，展现模特最纯粹、最自然的亲和力。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Timeline -->
+        <section id="career" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>职业历程</h2>
+                    <p>从起步到成熟的每一步，都凝聚着汗水与坚持</p>
+                </div>
+                <div class="career-list">
+                    <div class="career-item">
+                        <div class="career-date">2015</div>
+                        <div class="career-content">
+                            <h4>入行与初露锋芒</h4>
+                            <p>名模春晓正式签约模特经纪公司，开始参与各类商业平面拍摄。同年，首次登上国内知名时尚杂志内页，展现出不俗的镜头感。</p>
+                        </div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-date">2018</div>
+                        <div class="career-content">
+                            <h4>品牌合作爆发期</h4>
+                            <p>成功签约多个一线服装品牌，担任年度新品发布会模特。作品开始出现在各大时尚买手店与电商平台的首页推荐。</p>
+                        </div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-date">2021</div>
+                        <div class="career-content">
+                            <h4>风格确立与突破</h4>
+                            <p>确立个人独特的“清冷知性”风格，受邀参与国际品牌的线上发布会。拍摄风格从单一的展示向更具叙事性的艺术大片转变。</p>
+                        </div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-date">2024</div>
+                        <div class="career-content">
+                            <h4>多元化发展</h4>
+                            <p>除了继续深耕模特行业，春晓也开始涉足时尚博主领域，通过社交媒体分享穿搭心得与职业感悟，影响力进一步扩大。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                    <p>关于名模春晓的常见疑问解答</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">名模春晓主要拍摄哪种类型的写真？</div>
+                        <div class="faq-answer">
+                            名模春晓擅长多种风格，包括但不限于都市时尚、复古优雅、前卫艺术以及清新自然风。她能够根据不同的服装品牌调性和拍摄主题，快速调整状态，呈现出最契合的视觉效果。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何获取名模春晓的商务合作信息？</div>
+                        <div class="faq-answer">
+                            商务合作通常通过其所属的官方经纪公司进行。对于商业广告、杂志拍摄及活动邀约，建议关注官方发布的动态或通过正规渠道联系经纪团队。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">名模春晓有什么特别的拍摄习惯或要求吗？</div>
+                        <div class="faq-answer">
+                            在拍摄过程中，名模春晓非常注重与摄影师的沟通。她习惯在拍摄前进行充分的准备，包括了解服装特点、确定拍摄情绪，以确保在镜头前能够展现出最佳状态。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #ccc; font-size: 14px; line-height: 1.8;">
+                        本站致力于收录名模春晓的官方资料、时尚作品及相关行业资讯，为粉丝及关注者提供权威、准确的信息服务平台。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#profile">个人简介</a></li>
+                        <li><a href="#gallery">时尚写真</a></li>
+                        <li><a href="#career">职业历程</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注动态</h4>
+                    <ul>
+                        <li><a href="#">微博主页</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">小红书笔记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 名模春晓官方网站. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
