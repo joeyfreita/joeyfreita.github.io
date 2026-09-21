@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="熊猫人武僧天赋专页，提供最新的天赋加点方案、输出循环解析、生存技巧及PVP实战指南，助你打造最强熊猫武僧。">
+    <meta name="keywords" content="熊猫人武僧天赋,魔兽世界武僧,武僧PVP,武僧输出,熊猫人武僧加点">
+    <title>熊猫人武僧天赋-魔兽世界武僧加点方案与实战指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6d4c41;
+            --secondary-color: #d7ccc8;
+            --accent-color: #ffab00;
+            --text-color: #333;
+            --bg-color: #fcfcfc;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 天赋分类导航 */
+        .role-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 25px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 内容区块 */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* 天赋树展示区 */
+        .talent-tree {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .tree-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .tree-column-header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .talent-node {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .talent-node:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .node-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .node-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .node-level {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .node-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .node-effect {
+            background: rgba(255, 171, 0, 0.1);
+            border-left: 3px solid var(--accent-color);
+            padding: 8px;
+            font-size: 0.85rem;
+            color: #d84315;
+        }
+
+        /* 推荐方案卡片 */
+        .builds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .build-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .build-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .build-header h3 {
+            margin-bottom: 5px;
+        }
+
+        .build-tag {
+            font-size: 0.8rem;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        .build-body {
+            padding: 20px;
+        }
+
+        .build-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .stat-item strong {
+            color: var(--primary-color);
+        }
+
+        .build-note {
+            font-size: 0.9rem;
+            color: #666;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        /* 循环与技巧 */
+        .guides-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .guide-block h3 {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: #666;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #3e2723;
+            color: #d7ccc8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .nav-wrapper { flex-direction: column; height: auto; padding: 15px 0; }
+            nav ul { margin-top: 15px; gap: 15px; }
+            .guides-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <div class="logo">
+            <span>🐼</span> 熊猫人武僧天赋
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#talents">天赋加点</a></li>
+                <li><a href="#builds">推荐配装</a></li>
+                <li><a href="#guides">实战指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>掌握熊猫人武僧天赋</h1>
+        <p>从踏风到酒仙，从织雾到织法，深入解析熊猫人武僧天赋选择与玩法策略，助你在艾泽拉斯的战场上称霸。</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- 天赋分类 -->
+    <div class="role-tabs" id="talents">
+        <button class="tab-btn active" onclick="filterBuild('all')">综合推荐</button>
+        <button class="tab-btn" onclick="filterBuild('mizong')">织法武僧</button>
+        <button class="tab-btn" onclick="filterBuild('nizhan')">酒仙武僧</button>
+        <button class="tab-btn" onclick="filterBuild('zhexia')">踏风武僧</button>
+    </div>
+
+    <!-- 核心天赋树展示 -->
+    <section class="talent-tree">
+        <h2 class="section-title">核心天赋解析</h2>
+        <div class="tree-column">
+            <!-- 踏风分支 -->
+            <div class="tree-column-header">踏风 (输出) - 爆发力与机动性</div>
+            <div class="talent-node">
+                <div class="node-header">
+                    <span class="node-name">踏风盟约：踏风之魂</span>
+                    <span class="node-level">T1</span>
+                </div>
+                <p class="node-desc">你的“真气爆发”效果提升，并且真气技能有几率产生真气。</p>
+                <div class="node-effect">核心机制：大幅提升真气回复效率，保证爆发期的技能循环。</div>
+            </div>
+            <div class="talent-node">
+                <div class="node-header">
+                    <span class="node-name">真气涌动</span>
+                    <span class="node-level">T1</span>
+                </div>
+                <p class="node-desc">每次使用真气技能有几率使下一个真气技能无消耗。</p>
+                <div class="node-effect">配合：与踏风之魂叠加，实现瞬间爆发输出。</div>
+            </div>
+            <div class="talent-node">
+                <div class="node-header">
+                    <span class="node-name">幻影踢</span>
+                    <span class="node-level">T2</span>
+                </div>
+                <p class="node-desc">将幻影踢的目标标记，再次施放幻影踢造成额外伤害。</p>
+                <div class="node-effect">DPS提升：增加了技能的连贯性和爆发伤害。</div>
+            </div>
+
+            <!-- 酒仙分支 -->
+            <div class="tree-column-header" style="margin-top: 30px;">酒仙 (坦克) - 生存与减伤</div>
+            <div class="talent-node">
+                <div class="node-header">
+                    <span class="node-name">酒仙盟约：杯酒言欢</span>
+                    <span class="node-level">T1</span>
+                </div>
+                <p class="node-desc">你的“金钟罩”效果增强，并且当生命值低于30%时获得无敌。</p>
+                <div class="node-effect">生存：在关键时刻提供保命手段。</div>
+            </div>
+            <div class="talent-node">
+                <div class="node-header">
+                    <span class="node-name">醉拳精通</span>
+                    <span class="node-level">T2</span>
+                </div>
+                <p class="node-desc">大幅提升醉拳闪避的几率，并减少受到的暴击伤害。</p>
+                <div class="node-effect">坦克核心：提高坦度并稳定仇恨。</div>
+            </div>
+            <div class="talent-node">
+                <div class="node-header">
+                    <span class="node-name">生机玉</span>
+                    <span class="node-level">T3</span>
+                </div>
+                <p class="node-desc">受到致命伤害时，化为玉灵，5秒后复活并恢复生命值。</p>
+                <div class="node-effect">容错：防止OT或意外死亡。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 推荐配装 -->
+    <h2 class="section-title">热门天赋配装方案</h2>
+    <div class="builds-grid">
+        <article class="build-card" data-type="mizong">
+            <div class="build-header">
+                <h3>织法武僧 (PVP) <span class="build-tag">控制/爆发</span></h3>
+            </div>
+            <div class="build-body">
+                <div class="build-stats">
+                    <span class="stat-item">主属性：<strong>急速/暴击</strong></span>
+                    <span class="stat-item">副属性：<strong>全能</strong></span>
+                </div>
+                <div class="build-note">
+                    <strong>天赋选择：</strong> 优先选择增加法力回复和技能冷却缩减的天赋。建议点出“玄妙禅意”以减少控制时间。
+                </div>
+                <div class="build-note" style="margin-top:10px;">
+                    <strong>循环：</strong> 保持“爆裂掌”和“真气突”的施法节奏，利用“织法之雾”提供持续治疗与伤害。
+                </div>
+            </div>
+        </article>
+
+        <article class="build-card" data-type="nizhan">
+            <div class="build-header">
+                <h3>酒仙武僧 (PVE) <span class="build-tag">坦克</span></h3>
+            </div>
+            <div class="build-body">
+                <div class="build-stats">
+                    <span class="stat-item">主属性：<strong>急速/全能</strong></span>
+                    <span class="stat-item">副属性：<strong>暴击</strong></span>
+                </div>
+                <div class="build-note">
+                    <strong>天赋选择：</strong> 必须点出“酒仙盟约”的专属天赋。在团本中优先考虑“滚石”以减少AOE伤害。
+                </div>
+                <div class="build-note" style="margin-top:10px;">
+                    <strong>循环：</strong> 利用“醉拳”进行闪避，通过“烈阳酒”和“玉露酒”在团本BOSS战中频繁切换，保持减伤覆盖。
+                </div>
+            </div>
+        </article>
+
+        <article class="build-card" data-type="zhexia">
+            <div class="build-header">
+                <h3>踏风武僧 (PVE) <span class="build-tag">爆发输出</span></h3>
+            </div>
+            <div class="build-body">
+                <div class="build-stats">
+                    <span class="stat-item">主属性：<strong>急速</strong></span>
+                    <span class="stat-item">副属性：<strong>暴击/精通</strong></span>
+                </div>
+                <div class="build-note">
+                    <strong>天赋选择：</strong> 选择“踏风盟约”以最大化爆发。在单体BOSS战中，“幻影踢”是核心技能。
+                </div>
+                <div class="build-note" style="margin-top:10px;">
+                    <strong>循环：</strong> 保持“真气涌动”和“真气突”的空档期，优先使用“风火雷电”进行爆发输出。
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- 实战指南 -->
+    <h2 class="section-title">实战技巧与循环</h2>
+    <div class="guides-container">
+        <div class="guide-block">
+            <h3>输出循环</h3>
+            <ul class="guide-list">
+                <li><strong>起手：</strong> 使用“神鹤引项踢”或“神鹤引项翻”起手，积累真气。</li>
+                <li><strong>平砍：</strong> 保持“风火雷电”的平砍节奏，不要贪技能。</li>
+                <li><strong>爆发：</strong> 当真气达到5点时，使用“真气爆发”+“真气突”+“爆裂掌”连招，打出高额伤害。</li>
+                <li><strong>终结：</strong> 利用“幻影踢”标记目标，等待CD刷新后再次施放，触发连击效果。</li>
+            </ul>
+        </div>
+        <div class="guide-block">
+            <h3>生存技巧</h3>
+            <ul class="guide-list">
+                <li><strong>酒仙：</strong> 遇到爆发伤害时，立即开启“金钟罩”并使用“醉拳”闪避，不要吝啬技能。</li>
+                <li><strong>织雾：</strong> 保持“织法之雾”在队友身上，利用“禅意之云”在关键时刻抬血。</li>
+                <li><strong>通用：</strong> 善用“烟雾弹”解除控制效果，这是武僧唯一的解控技能，需谨慎使用。</li>
+                <li><strong>跑位：</strong> 利用“踏风”的“幻影闪”和“神鹤引项翻”进行高机动性跑位，躲避致命伤害。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">常见问题 (FAQ)</h2>
+        <div class="faq-item">
+            <div class="faq-question">熊猫人武僧哪个职业最强？</div>
+            <div class="faq-answer">这取决于版本和玩法。踏风武僧通常拥有极高的爆发输出，适合喜欢快节奏战斗的玩家；酒仙武僧则是团本坦克的优选，生存能力极强；织雾武僧则更适合辅助和PVP控制。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">新手应该选择哪个天赋？</div>
+            <div class="faq-answer">对于新手，推荐从踏风武僧入手，因为其操作直观且伤害反馈明显；如果你喜欢当“万金油”且在团队中不可或缺，可以选择织雾武僧。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">如何快速获取真气？</div>
+            <div class="faq-answer">使用“真气涌动”天赋是核心，配合“踏风之魂”或“织法之魂”盟约效果，可以在短时间内快速回复真气。此外，通过“爆裂掌”和“真气突”的溢出也能获得额外真气。</div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2023 熊猫人武僧天赋指南 - 致力于提供最全的魔兽世界武僧攻略</p>
+        <p style="margin-top:10px; font-size: 0.8rem; opacity: 0.7;">本站内容仅供学习交流，游戏版权属于暴雪娱乐。</p>
+    </div>
+</footer>
+
+<script>
+    // 简单的标签页切换逻辑
+    function filterBuild(type) {
+        const cards = document.querySelectorAll('.build-card');
+        const buttons = document.querySelectorAll('.tab-btn');
+        
+        // 更新按钮状态
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // 筛选卡片
+        cards.forEach(card => {
+            if (type === 'all' || card.dataset.type === type) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // FAQ折叠面板逻辑
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // 关闭其他打开的项
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) otherItem.classList.remove('active');
+            });
+            // 切换当前项
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
