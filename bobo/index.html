@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>啵啵 - 新一代社交娱乐互动平台</title>
+    <meta name="description" content="啵啵是一个专注于即时互动与社交娱乐的在线平台。在这里，用户可以通过短视频、直播和趣味互动游戏，发现身边的趣事，结识志同道合的朋友，享受轻松愉悦的数字生活。">
+    <meta name="keywords" content="啵啵, 社交, 互动, 短视频, 直播, 娱乐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #FF2E63;
+            --secondary-color: #08D9D6;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: transform 0.1s, background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e02550;
+            transform: translateY(-1px);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f3 0%, #e0f7fa 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background-color: #fff5f7;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: #ffe6eb;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .card h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 20px;
+        }
+
+        .card p {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        /* Interactive Demo Area */
+        .demo-section {
+            background: var(--card-bg);
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+
+        .demo-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .demo-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .demo-content h2 {
+            font-size: 32px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .demo-content ul {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .demo-content li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .demo-content li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .demo-visual {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            border-radius: var(--radius);
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .demo-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .demo-overlay {
+            position: absolute;
+            background: rgba(255, 46, 99, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Content Feed */
+        .content-feed {
+            padding: 40px 0;
+        }
+
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .feed-item {
+            aspect-ratio: 9/16;
+            background: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .feed-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .feed-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .feed-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 10px;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-sub);
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item.active .faq-question::before {
+            content: "+";
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #999;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .feed-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .demo-layout {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" fill="#FF2E63"/>
+                </svg>
+                <span>啵啵</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">特色功能</a></li>
+                    <li><a href="#community">社区动态</a></li>
+                    <li><a href="#download">下载应用</a></li>
+                    <li><a href="#help">帮助中心</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-primary">立即体验</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>发现生活中的每一个快乐“啵”</h1>
+                <p>加入啵啵，通过短视频、实时直播和趣味互动，与世界分享你的瞬间，发现身边的精彩。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">安卓下载</a>
+                    <a href="#" class="btn-secondary">iOS 下载</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">核心功能</h2>
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="icon-box">🎬</div>
+                        <h3>趣味短视频</h3>
+                        <p>海量原创内容，从生活技巧到搞笑段子，总有一款适合你。支持一键剪辑、滤镜和配乐，轻松创作你的专属大片。</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon-box">💬</div>
+                        <h3>即时互动</h3>
+                        <p>点赞、评论、分享，与创作者和观众实时交流。通过弹幕互动，让观看体验更加生动有趣。</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon-box">🎮</div>
+                        <h3>趣味游戏</h3>
+                        <p>内置多款轻量级互动游戏，邀请好友PK，赢取虚拟勋章和专属奖励，增加社交粘性。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section class="demo-section">
+            <div class="container demo-layout">
+                <div class="demo-content">
+                    <h2>随时随地，释放你的表达欲</h2>
+                    <ul>
+                        <li>智能推荐算法，精准推送你感兴趣的内容</li>
+                        <li>高清画质与流畅播放，带来影院级视觉体验</li>
+                        <li>丰富的音乐库，让每一个视频都自带BGM</li>
+                        <li>完善的隐私设置，保护你的个人空间</li>
+                    </ul>
+                    <a href="#" class="btn-primary">了解更多</a>
+                </div>
+                <div class="demo-visual">
+                    <img src="https://picsum.photos/seed/social1/600/400.jpg" alt="App Interface Preview">
+                    <div class="demo-overlay">点击屏幕开始互动</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Feed Section -->
+        <section id="community" class="content-feed">
+            <div class="container">
+                <h2 class="section-title">热门内容推荐</h2>
+                <div class="feed-grid">
+                    <div class="feed-item">
+                        <img src="https://picsum.photos/seed/feed1/300/533.jpg" alt="热门视频">
+                        <div class="feed-overlay">
+                            <div>12.5w 播放</div>
+                            <div>生活Vlog</div>
+                        </div>
+                    </div>
+                    <div class="feed-item">
+                        <img src="https://picsum.photos/seed/feed2/300/533.jpg" alt="热门视频">
+                        <div class="feed-overlay">
+                            <div>8.2w 播放</div>
+                            <div>搞笑段子</div>
+                        </div>
+                    </div>
+                    <div class="feed-item">
+                        <img src="https://picsum.photos/seed/feed3/300/533.jpg" alt="热门视频">
+                        <div class="feed-overlay">
+                            <div>5.6w 播放</div>
+                            <div>才艺展示</div>
+                        </div>
+                    </div>
+                    <div class="feed-item">
+                        <img src="https://picsum.photos/seed/feed4/300/533.jpg" alt="热门视频">
+                        <div class="feed-overlay">
+                            <div>3.1w 播放</div>
+                            <div>美食探店</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="btn-secondary">查看更多内容</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="help" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="grid-3">
+                    <div class="faq-item">
+                        <button class="faq-question">如何注册账号？</button>
+                        <div class="faq-answer">
+                            <p>您可以通过手机号或第三方社交账号（微信、QQ）快速注册。注册后即可浏览内容并开始创作。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">如何保护我的隐私？</button>
+                        <div class="faq-answer">
+                            <p>我们在设置中提供了详细的隐私选项，您可以控制谁能看到您的作品、私信以及地理位置信息。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">可以发布什么样的内容？</button>
+                        <div class="faq-answer">
+                            <p>我们鼓励原创、积极、健康的内容。禁止发布暴力、色情、违法或侵犯他人版权的信息。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">功能介绍</a></li>
+                        <li><a href="#">更新日志</a></li>
+                        <li><a href="#">开发者平台</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助支持</h4>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">社区规范</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 啵啵互动平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
